@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const token = 'NzIxMDU1NTczMjEwMTY5NDM0.XuqZ1A.O79O0CKUxN3jFmdA8SIRH1jN0q4';
+//insert token for DiscordBot, removed from source for privacy
+const token = '';
 
 const PREFIX  = '$';
 var pool = [];
