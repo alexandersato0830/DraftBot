@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-//insert token for DiscordBot, removed from source for privacy
+//insert your bot's token
 const token = '';
 
 const PREFIX  = '$';
@@ -137,7 +137,13 @@ bot.on('message', message=>{
         message.channel.send("These are my commands-\n$join -add yourself to the pool\n$start -sends message to start\n$add name -adds player to pool by name" + 
         "\n$leave -removes yourself from pool\n$remove name -removes player by name\n$display -shows the current draft status\n$a 1-10 -adds the corresponding player to attacker" +
         " side\n$d 1-10 -adds the corresponding player to defender side\n$removea 1-10 -returns the corresponding player from attacker side to pool\n$removed 1-10 -" +
-        "returns the corresponding player from defender side to pool\n$help -shows this message");
+        "returns the corresponding player from defender side to pool\n$clear - removes all players\n$help -shows this message");
+        break;
+    case 'clear':
+        pool = [];
+        apool = [];
+        dpool = [];
+        message.channel.send("All players have been removed!");
         break;
     }
 })
